@@ -3,8 +3,8 @@ package routers
 import (
 	"github.com/codegangsta/negroni"
 	"github.com/gorilla/mux"
-	"github.com/sandeeppagatur/DemoProject/controllers"
-	"github.com/sandeeppagatur/DemoProject/core/authentication"
+	"github.com/sandeeppagatur/MyGolangProject/controllers"
+	"github.com/sandeeppagatur/MyGolangProject/core/authentication"
 )
 
 func SetAuthenticationRoutes(router *mux.Router) *mux.Router {

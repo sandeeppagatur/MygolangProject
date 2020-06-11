@@ -1,9 +1,9 @@
 package services
 
 import (
-	"api.jwt.auth/api/parameters"
-	"api.jwt.auth/core/authentication"
-	"api.jwt.auth/services/models"
+	"github.com/sandeeppagatur/MyGolangProject/api/parameters"
+	"github.com/sandeeppagatur/MyGolangProject/core/authentication"
+	"github.com/sandeeppagatur/MyGolangProject/models"
 	"encoding/json"
 	jwt "github.com/dgrijalva/jwt-go"
 	request "github.com/dgrijalva/jwt-go/request"

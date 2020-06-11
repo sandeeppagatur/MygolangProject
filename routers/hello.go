@@ -1,8 +1,8 @@
 package routers
 
 import (
-	"api.jwt.auth/controllers"
-	"api.jwt.auth/core/authentication"
+	"github.com/sandeeppagatur/MyGolangProject/controllers"
+	"github.com/sandeeppagatur/MyGolangProject/core/authentication"
 	"github.com/codegangsta/negroni"
 	"github.com/gorilla/mux"
 )

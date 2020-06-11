@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"api.jwt.auth/services"
-	"api.jwt.auth/services/models"
+	"github.com/sandeeppagatur/MyGolangProject/services"
+	"github.com/sandeeppagatur/MyGolangProject/models"
 	"encoding/json"
 	"net/http"
 )

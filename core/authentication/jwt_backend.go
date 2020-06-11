@@ -1,9 +1,9 @@
 package authentication
 
 import (
-	"api.jwt.auth/core/redis"
-	"api.jwt.auth/services/models"
-	"api.jwt.auth/settings"
+	"github.com/sandeeppagatur/MyGolangProject/core/redis"
+	"github.com/sandeeppagatur/MyGolangProject/models"
+	"github.com/sandeeppagatur/MyGolangProject/settings"
 	"bufio"
 	"github.com/pborman/uuid"
 	"crypto/rsa"
