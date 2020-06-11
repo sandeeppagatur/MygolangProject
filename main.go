@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
-	"models/User"
+	"github.com/sandeeppagatur/DemoProject/models/Event"
 	"io/ioutil"
 	"log"
 	"net/http"

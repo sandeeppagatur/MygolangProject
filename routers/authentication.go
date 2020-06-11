@@ -1,10 +1,10 @@
 package routers
 
 import (
-	"DemoProject/controllers"
-	"DemoProject/core/authentication"
 	"github.com/codegangsta/negroni"
 	"github.com/gorilla/mux"
+	"github.com/sandeeppagatur/DemoProject/controllers"
+	"github.com/sandeeppagatur/DemoProject/core/authentication"
 )
 
 func SetAuthenticationRoutes(router *mux.Router) *mux.Router {
