@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
-	"github.com/sandeeppagatur/DemoProject/models/Event"
 	"io/ioutil"
 	"log"
 	"net/http"
+	_ "github.com/sandeeppagatur/MyGolangProject/models"
 )
 
 

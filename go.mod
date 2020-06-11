@@ -1,4 +1,4 @@
-module DemoProject/goSample/sandeeppagatur
+module demoproject.com
 
 go 1.14
 

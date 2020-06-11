@@ -1,4 +1,5 @@
 package models
+
 type event struct {
 	ID          string `json:"ID"`
 	Title       string `json:"Title"`
