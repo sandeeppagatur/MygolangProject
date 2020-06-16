@@ -1,8 +1,28 @@
 package repository
 
-import "github.com/sandeeppagatur/MyGolangProject/models"
+import (
+	"github.com/sandeeppagatur/MyGolangProject/models"
+)
 
-func CreateUser()  {
-	Database:=GetDBObject()
-	Database.Create(&models.User{Code: "L1212", Price: 1000})
+
+
+func CreateNewUser(event *models.User)  {
+	db:=GetDBObject()
+	if db != nil {
+		db.Create(event)
+	}
+
+}
+func FindAllUsers() *[]models.User {
+	var err error
+	users := []models.User{}
+	db:=GetDBObject()
+	if db != nil {
+		err = db.Debug().Model(&models.User{}).Limit(100).Find(&users).Error
+		if err != nil {
+			return &[]models.User{}
+		}
+	}
+
+	return &users
 }

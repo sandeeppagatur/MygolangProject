@@ -79,5 +79,6 @@ func GetOneEvent(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetAllEvents(w http.ResponseWriter, r *http.Request) {
+	events:=repository.GetEvents()
 	json.NewEncoder(w).Encode(events)
 }
