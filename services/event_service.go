@@ -3,12 +3,14 @@ package services
 import (
 	"encoding/json"
 	"fmt"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/gorilla/mux"
+	_ "github.com/jinzhu/gorm"
+	"github.com/sandeeppagatur/MyGolangProject/models"
+	"github.com/sandeeppagatur/MyGolangProject/repository"
 	"io/ioutil"
 	"net/http"
-	"github.com/sandeeppagatur/MyGolangProject/models"
 )
-
 
 type allEvents []models.Event
 
@@ -29,6 +31,7 @@ func CreateEvent(w http.ResponseWriter, r *http.Request) {
 
 	json.Unmarshal(reqBody, &newEvent)
 	events = append(events, newEvent)
+	repository.CreateNewEvent(&newEvent)
 	w.WriteHeader(http.StatusCreated)
 
 	json.NewEncoder(w).Encode(newEvent)
@@ -54,9 +57,6 @@ func UpdateEvent(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-
-
-
 func DeleteEvent(w http.ResponseWriter, r *http.Request) {
 	eventID := mux.Vars(r)["id"]
 
@@ -67,7 +67,6 @@ func DeleteEvent(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 }
-
 
 func GetOneEvent(w http.ResponseWriter, r *http.Request) {
 	eventID := mux.Vars(r)["id"]

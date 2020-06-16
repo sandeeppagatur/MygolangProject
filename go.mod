@@ -3,6 +3,7 @@ module github.com/sandeeppagatur/MyGolangProject
 go 1.14
 
 require (
+	github.com/Shopify/sarama v1.26.4
 	github.com/codegangsta/negroni v1.0.0
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/garyburd/redigo v1.6.0

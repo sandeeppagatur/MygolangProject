@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"github.com/sandeeppagatur/MyGolangProject/services"
-	"github.com/sandeeppagatur/MyGolangProject/models"
 	"encoding/json"
+	"github.com/sandeeppagatur/MyGolangProject/models"
+	"github.com/sandeeppagatur/MyGolangProject/services"
 	"net/http"
 )
 

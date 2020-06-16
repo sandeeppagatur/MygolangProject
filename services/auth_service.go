@@ -1,12 +1,12 @@
 package services
 
 import (
-	"github.com/sandeeppagatur/MyGolangProject/api/parameters"
-	"github.com/sandeeppagatur/MyGolangProject/core/authentication"
-	"github.com/sandeeppagatur/MyGolangProject/models"
 	"encoding/json"
 	jwt "github.com/dgrijalva/jwt-go"
 	request "github.com/dgrijalva/jwt-go/request"
+	"github.com/sandeeppagatur/MyGolangProject/api/parameters"
+	"github.com/sandeeppagatur/MyGolangProject/core/authentication"
+	"github.com/sandeeppagatur/MyGolangProject/models"
 	"net/http"
 )
 

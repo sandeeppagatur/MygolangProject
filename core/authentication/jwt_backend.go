@@ -1,15 +1,15 @@
 package authentication
 
 import (
-	"github.com/sandeeppagatur/MyGolangProject/core/redis"
-	"github.com/sandeeppagatur/MyGolangProject/models"
-	"github.com/sandeeppagatur/MyGolangProject/settings"
 	"bufio"
-	"github.com/pborman/uuid"
 	"crypto/rsa"
 	"crypto/x509"
 	"encoding/pem"
 	jwt "github.com/dgrijalva/jwt-go"
+	"github.com/pborman/uuid"
+	"github.com/sandeeppagatur/MyGolangProject/core/redis"
+	"github.com/sandeeppagatur/MyGolangProject/models"
+	"github.com/sandeeppagatur/MyGolangProject/settings"
 	"golang.org/x/crypto/bcrypt"
 	"os"
 	"time"
