@@ -9,10 +9,12 @@ import (
 	"github.com/sandeeppagatur/MyGolangProject/repository"
 	"io/ioutil"
 	"net/http"
+	"text/template"
 )
 
 type allUsers []models.Event
 
+var Tmpl = template.Must(template.ParseGlob("form/*"))
 
 
 func CreateUser(w http.ResponseWriter, r *http.Request) {
@@ -73,5 +75,6 @@ func FindUser(w http.ResponseWriter, r *http.Request) {
 
 func GetAllUsers(w http.ResponseWriter, r *http.Request) {
 	users:=repository.FindAllUsers()
-	json.NewEncoder(w).Encode(users)
+	//json.NewEncoder(w).Encode(users)
+	Tmpl.ExecuteTemplate(w, "Index", users)
 }

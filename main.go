@@ -6,7 +6,9 @@ import (
 	"github.com/sandeeppagatur/MyGolangProject/services"
 	"log"
 	"net/http"
+	"text/template"
 )
+var Tmpl = template.Must(template.ParseGlob("form/*"))
 
 func homeLink(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Welcome home!")
@@ -25,13 +27,13 @@ func main() {
 	router.HandleFunc("/events/{id}", services.FindUser).Methods("GET")
 	//router.HandleFunc("/events/{id}", services.UpdateEvent).Methods("PATCH")
 	//router.HandleFunc("/events/{id}", services.DeleteEvent).Methods("DELETE")
-	http.HandleFunc("/", form.Index)
-	http.HandleFunc("/show", Show)
-	http.HandleFunc("/new", New)
-	http.HandleFunc("/edit", Edit)
-	http.HandleFunc("/insert", Insert)
-	http.HandleFunc("/update", Update)
-	http.HandleFunc("/delete", Delete)
-	http.ListenAndServe(":8080", nil)
+	//router.HandleFunc("/", Index)
+	//router.HandleFunc("/show", Show)
+	//router.HandleFunc("/new", New)
+	//router.HandleFunc("/edit", Edit)
+	//router.HandleFunc("/insert", Insert)
+	//router.HandleFunc("/update", Update)
+	//router.HandleFunc("/delete", Delete)
+	//http.ListenAndServe(":8080", nil)
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
