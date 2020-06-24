@@ -18,7 +18,7 @@ Project Setup:
       Url: localhost:8080/user
       RequestBody: 
       {
-      "username": "sandeepsona",
-      "emailId": "sandeepsona@gmail.com"
+      "username": "sandeep",
+      "emailId": "sandeep@gmail.com"
       }
 6. check if it is successfully created by localhost:8080/users.      
