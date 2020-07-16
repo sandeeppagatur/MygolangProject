@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 	"github.com/gorilla/mux"
+	"github.com/rs/cors"
 	"github.com/sandeeppagatur/MyGolangProject/services"
 	"log"
 	"net/http"
 	"text/template"
-	"github.com/rs/cors"
 )
+
 var Tmpl = template.Must(template.ParseGlob("form/*"))
 
 func homeLink(w http.ResponseWriter, r *http.Request) {
@@ -32,6 +33,7 @@ func main() {
 	handler := cors.Default().Handler(router)
 	log.Fatal(http.ListenAndServe(":8080", handler))
 }
+
 //type WithCORS struct {
 //	r *mux.Router
 //
