@@ -33,7 +33,22 @@ func Load(db *gorm.DB) {
 		if err != nil {
 			log.Fatalf("cannot migrate table: %v", err)
 		}
-
+		err = db.Debug().AutoMigrate(&models.Exam{}).Error
+		if err != nil {
+			log.Fatalf("cannot migrate table: %v", err)
+		}
+		err = db.Debug().AutoMigrate(&models.Question{}).Error
+		if err != nil {
+			log.Fatalf("cannot migrate table: %v", err)
+		}
+		err = db.Debug().AutoMigrate(&models.QOption{}).Error
+		if err != nil {
+			log.Fatalf("cannot migrate table: %v", err)
+		}
+		err = db.Debug().AutoMigrate(&models.Answer{}).Error
+		if err != nil {
+			log.Fatalf("cannot migrate table: %v", err)
+		}
 
 	}
 
